@@ -19,7 +19,12 @@ for(var i = 0; i<paciente.length;i++){
     }
 
     if(verifica_peso&&verifica_altura){
-    imc.textContent = parseInt(peso)/(parseFloat(altura)*parseFloat(altura));
-    imc.textContent = parseFloat(imc.textContent).toFixed(2)
+    imc.textContent = calculaImc(peso,altura)
     }
+}
+
+function calculaImc(peso,altura){
+imc = 0;
+imc = peso/(altura*altura);
+return imc.toFixed(2);
 }
