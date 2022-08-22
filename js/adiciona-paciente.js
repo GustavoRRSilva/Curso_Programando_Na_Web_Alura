@@ -5,20 +5,22 @@ botaoEnviar.addEventListener("click", (event) => {
     var form = document.querySelector("#form-adiciona")
     var paciente = obtemPacienteDoFormulario(form);
     var erros = validaPaciente(paciente);
-    var pacienteTr = montaTr(paciente);
     console.log(erros)
     if (erros.length > 0) {
         exibeMensagensDeErro(erros);
         return;
     }
-
+    adicionaPacientesNaTabela(paciente)
     var ul = document.querySelector("#mensagens-erro")
     ul.innerHTML = " ";
-    var tabelaDePacientes = document.querySelector("#tabela-pacientes")
-    tabelaDePacientes.appendChild(pacienteTr)
+  
     form.reset();
 })
-
+function adicionaPacientesNaTabela(paciente){
+    var pacienteTr = montaTr(paciente)
+    var tabelaDePacientes = document.querySelector("#tabela-pacientes")
+    tabelaDePacientes.appendChild(pacienteTr)
+}
 
 
 function obtemPacienteDoFormulario(form) {

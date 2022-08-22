@@ -1,6 +1,4 @@
 var campoFiltro = document.querySelector("#filtrar-tabela");
-
-console.log(campoFiltro)
 campoFiltro.addEventListener("input",function(){
     nomeFiltro=this.value;
     console.log(nomeFiltro)
@@ -23,8 +21,4 @@ campoFiltro.addEventListener("input",function(){
             paciente.classList.remove("invisivel")
         });
     }
-
-
-
-
 })
