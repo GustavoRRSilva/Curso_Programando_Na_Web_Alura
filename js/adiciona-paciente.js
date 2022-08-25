@@ -13,10 +13,10 @@ botaoEnviar.addEventListener("click", (event) => {
     adicionaPacientesNaTabela(paciente)
     var ul = document.querySelector("#mensagens-erro")
     ul.innerHTML = " ";
-  
+
     form.reset();
 })
-function adicionaPacientesNaTabela(paciente){
+function adicionaPacientesNaTabela(paciente) {
     var pacienteTr = montaTr(paciente)
     var tabelaDePacientes = document.querySelector("#tabela-pacientes")
     tabelaDePacientes.appendChild(pacienteTr)
